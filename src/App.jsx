@@ -4,7 +4,6 @@ import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import { ScrollToTop } from "./Config";
 import About from "./pages/About";
-import { useEffect } from "react";
 
 function App() {
   // useEffect(() => {
