@@ -40,3 +40,47 @@ export default function About() {
     </div>
   );
 }
+
+// import { useEffect, useState } from "react";
+// import { useParams } from "react-router-dom";
+
+// function About() {
+//   const { id } = useParams(); // URL থেকে :id প্যারামিটার পাওয়া যাবে
+//   const [data, setData] = useState<any>(null);
+//   const [loading, setLoading] = useState<boolean>(true);
+//   const [error, setError] = useState<string | null>(null);
+
+//   useEffect(() => {
+//     if (!id) return; // যদি id না থাকে, কিছুই করবো না
+
+//     const fetchData = async () => {
+//       try {
+//         const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+//         if (!response.ok) {
+//           throw new Error("Failed to fetch data");
+//         }
+//         const result = await response.json();
+//         setData(result);
+//       } catch (err: any) {
+//         setError(err.message);
+//       } finally {
+//         setLoading(false);
+//       }
+//     };
+
+//     fetchData();
+//   }, [id]); 
+
+//   if (loading) return <p>Loading...</p>;
+//   if (error) return <p>Error: {error}</p>;
+
+//   return (
+//     <div className="p-5">
+//       <h1 className="text-xl font-bold">Post ID: {id}</h1>
+//       <h2 className="text-lg text-gray-700">{data?.title}</h2>
+//       <p>{data?.body}</p>
+//     </div>
+//   );
+// }
+
+// export default About;
